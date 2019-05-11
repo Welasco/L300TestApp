@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="background-color: #8fbc8f">
+    <h2>My ToDo List</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <h2>Upcoming Items</h2>
+        <table class="grid" cellpadding="5" cellspacing="5">
+            @foreach (var item in Model.toDoes)
+            {
+            <tr>
+                <td>@item.Description  </td>
+                <td>&nbsp &nbsp</td>
+                <td> - </td>
+                <td>&nbsp &nbsp</td>
+                <td>@item.DueDate</td>
+            </tr>
+            }
+        </table>
+    </div>
+</div>
